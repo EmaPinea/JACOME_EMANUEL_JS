@@ -172,13 +172,33 @@ do {
             break;
         }
         case "2":
+            if (cuposDisponibles > 10) {
+                alert("Cupos disponibles: " + cuposDisponibles);
+            } else if (cuposDisponibles >= 1 && cuposDisponibles <= 10) {
+                alert("Ultimos cupos disponibles: " + cuposDisponibles);
+            } else {
+                alert("Evento agotado, ya no hay cupos diisponibles");
+            }
             break;
 
         case "3":
+            alert(
+                "RESUMEN DE INGRESOS\n\n" +
+                "Entradas vendidas: " + entradasVendidas + "\n" +
+                "Ingresos acumulados: $" + ingresosAcumulados + "\n" +
+                "Compras realizadas: " + comprasRealizadas
+            );
             break;
 
         case "4":
-            alert("Gracias por utilizar el sistema");
+            alert(
+                "RESUMEN FINAL\n\n" +
+                "Entradas vendidas: " + entradasVendidas + "\n" +
+                "Compras realizadas: " + comprasRealizadas + "\n" +
+                "Ingresos acumulados: $" + ingresosAcumulados + "\n" +
+                "Cupos restantes: " + cuposDisponibles + "\n\n" +
+                "Gracias por comprar"
+            );
             break;
 
         default:
